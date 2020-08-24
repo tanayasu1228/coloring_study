@@ -39,4 +39,14 @@ loop do
 
   push_info(lists, subject, time)
   print_lists(lists)
+  puts <<~TEXT
+  
+  引き続き入力しますか？
+  YES -> y
+  No -> n
+  TEXT
+  print "選択を入力 ＞"
+
+  answer = gets.chomp
+  break if answer == "n"
 end
