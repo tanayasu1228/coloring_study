@@ -1,3 +1,5 @@
+require 'colorize'
+
 def input_subject
   print "学習項目を入力してください > "
   gets.chomp
@@ -23,7 +25,7 @@ def print_lists(lists)
   puts "学習記録\n\n"
   lists.each do |hash|
     check_mark = "■ " * (hash[:time] / 15)
-    puts "#{hash[:subject]} #{check_mark}"
+    puts "#{hash[:subject]} #{check_mark.green}"
   end
 end
 
